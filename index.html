@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slotra — Online booking for salons &amp; clinics</title>
+  <meta name="description" content="Slotra gives salons, spas and clinics a 24×7 booking page, WhatsApp reminders and a simple appointment calendar. Fewer calls, fewer no-shows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Flag that JS is on, so scroll-reveal styles only apply when they can be undone -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="Slotra home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="23" rx="6"/><path d="M3 13h26M10 3v6M22 3v6"/><path class="tick" d="M11 21l3.5 3.5L21 18"/></svg>
+        </span>
+        <span class="logo-text">Slot<span>ra</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="btn btn-accent nav-cta" data-open-modal data-plan="Free">
+          Get Started
+          <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </button>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="kicker reveal">Booking software for salons &amp; clinics</span>
+          <h1 class="reveal">
+            Keep your chairs full,<br />
+            <em>not your</em> phone line.
+          </h1>
+          <p class="lead reveal">
+            Slotra gives your salon, spa or clinic a 24×7 booking page, automatic WhatsApp
+            reminders and one simple calendar for every staff member, from
+            <strong>₹0 a month</strong>.
+          </p>
+          <div class="hero-actions reveal">
+            <button class="btn btn-accent btn-lg" data-open-modal data-plan="Free">
+              Start free
+              <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            </button>
+            <a href="#pricing" class="btn btn-outline btn-lg">
+              See pricing
+              <svg class="arrow down" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+          </div>
+          <ul class="chips reveal" aria-label="Highlights">
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Book 24×7</li>
+            <li><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>WhatsApp reminders</li>
+            <li><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>No-show protection</li>
+          </ul>
+        </div>
+
+        <!-- Visual: phone + floating cards, built in HTML/CSS -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-head">
+                <div class="app-avatar">GS</div>
+                <div>
+                  <b>Glow Studio</b>
+                  <small><i class="live"></i>Accepting bookings</small>
+                </div>
+              </div>
+
+              <div class="app-hero-card">
+                <small>Friday, 13 November</small>
+                <b>Today's bookings</b>
+                <div class="app-hero-row">
+                  <span class="big">18</span>
+                  <span class="meta">₹14,600<br /><em>expected</em></span>
+                </div>
+              </div>
+
+              <div class="app-days">
+                <span>Tue<b>10</b></span><span>Wed<b>11</b></span><span>Thu<b>12</b></span>
+                <span class="on">Fri<b>13</b></span><span>Sat<b>14</b></span>
+              </div>
+
+              <ul class="app-slots">
+                <li><time>10:00</time><span class="slot-card c1"><b>Haircut &amp; style</b>Ananya · Riya</span></li>
+                <li><time>11:30</time><span class="slot-card c2"><b>Facial — Hydra</b>Meera · Sana</span></li>
+                <li><time>13:00</time><span class="slot-card open">+ Open slot</span></li>
+                <li><time>14:30</time><span class="slot-card c3"><b>Hair colour</b>Kavya · Riya</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="float-card fc-booking">
+            <span class="fc-icon accent">✓</span>
+            <div><b>New booking</b><small>Priya · Haircut · 4:30 PM</small></div>
+          </div>
+          <div class="float-card fc-reminder">
+            <span class="fc-icon green">
+              <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>
+            </span>
+            <div><b>Reminder sent</b><small>on WhatsApp · 2h before</small></div>
+          </div>
+          <div class="float-card fc-stat">
+            <small>No-shows this month</small>
+            <b>−62%</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- Industries marquee -->
+      <div class="marquee" aria-label="Used by">
+        <div class="marquee-track">
+          <span>Hair salons</span><span>✦</span><span>Dental clinics</span><span>✦</span>
+          <span>Spas</span><span>✦</span><span>Skin &amp; laser clinics</span><span>✦</span>
+          <span>Barbershops</span><span>✦</span><span>Physiotherapy</span><span>✦</span>
+          <span>Nail studios</span><span>✦</span><span>Eye clinics</span><span>✦</span>
+          <!-- duplicated for a seamless loop -->
+          <span aria-hidden="true">Hair salons</span><span aria-hidden="true">✦</span><span aria-hidden="true">Dental clinics</span><span aria-hidden="true">✦</span>
+          <span aria-hidden="true">Spas</span><span aria-hidden="true">✦</span><span aria-hidden="true">Skin &amp; laser clinics</span><span aria-hidden="true">✦</span>
+          <span aria-hidden="true">Barbershops</span><span aria-hidden="true">✦</span><span aria-hidden="true">Physiotherapy</span><span aria-hidden="true">✦</span>
+          <span aria-hidden="true">Nail studios</span><span aria-hidden="true">✦</span><span aria-hidden="true">Eye clinics</span><span aria-hidden="true">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">01</span>
+          <h2>Everything a busy front desk needs, <em>in one app.</em></h2>
+          <p>Stop juggling a diary, a phone and three WhatsApp chats. Slotra keeps every appointment in one place.</p>
+        </div>
+
+        <div class="bento">
+          <article class="feature-card fc-wide reveal">
+            <h3>Your own booking page</h3>
+            <p>Share one link on Instagram, Google Maps and WhatsApp. Clients pick a service, a staff member and a free time slot, with no calls and no double bookings.</p>
+            <div class="mini-link">slotra.in/<b>glow-studio</b><span>Copy</span></div>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>WhatsApp &amp; SMS reminders</h3>
+            <p>Automatic confirmations and reminders 24 hours and 2 hours before every visit.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>Advance payments</h3>
+            <p>Take a small UPI or card deposit when booking. No-shows drop and your time stays paid for.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>Staff calendars</h3>
+            <p>Every stylist or doctor gets their own schedule, breaks and leave days, all on one screen.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>Client records</h3>
+            <p>Visit history, preferences, patient notes and allergies, ready before the client sits down.</p>
+          </article>
+
+          <article class="feature-card fc-dark reveal">
+            <h3>Daily business report</h3>
+            <p>Bookings, revenue, top services and repeat clients, sent to your phone every night at 9 PM.</p>
+            <div class="mini-bars"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:50%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:95%"></i></div>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>Works in your language</h3>
+            <p>Booking pages and reminders in English, हिंदी and मराठी, so every client feels at home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT / WHO IT'S FOR ================= -->
+    <section class="section section-cream" id="about">
+      <div class="container about-inner">
+        <div class="about-copy reveal">
+          <span class="section-num">02</span>
+          <h2>Built for the way <em>salons and clinics</em> actually work.</h2>
+          <p>Slotra is an online appointment system. Your clients book themselves, your staff see their day at a glance, and reminders go out automatically. Pick your business type to see how it fits.</p>
+
+          <div class="tabs" role="tablist" aria-label="Business type">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-salon" id="tab-salon">Salons &amp; spas</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-clinic" id="tab-clinic" tabindex="-1">Clinics</button>
+          </div>
+
+          <div class="tab-panel" id="panel-salon" role="tabpanel" aria-labelledby="tab-salon">
+            <ul class="check-list">
+              <li>Book by service, duration and favourite stylist</li>
+              <li>Combo packages and memberships</li>
+              <li>Walk-in queue alongside online bookings</li>
+              <li>Instagram “Book now” button support</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="panel-clinic" role="tabpanel" aria-labelledby="tab-clinic" hidden>
+            <ul class="check-list">
+              <li>Doctor-wise OPD slots and token numbers</li>
+              <li>Patient history and prescription notes</li>
+              <li>Follow-up reminders after each visit</li>
+              <li>Consultation fee collected at booking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-stats reveal">
+          <div class="stat"><b data-count="3200">0</b><span>businesses on Slotra</span></div>
+          <div class="stat"><b data-count="62" data-suffix="%">0</b><span>fewer no-shows on average</span></div>
+          <div class="stat"><b data-count="9" data-suffix=" hrs">0</b><span>front-desk time saved each week</span></div>
+          <div class="stat"><b data-count="4.9" data-decimals="1" data-suffix="★">0</b><span>average owner rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section section-dark" id="how-it-works">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">03</span>
+          <h2>Live in an afternoon, <em>in three steps.</em></h2>
+          <p>No hardware and no training sessions. If you can use WhatsApp, you can use Slotra.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Add your services &amp; staff</h3>
+            <p>Enter your menu, prices, durations and working hours. Import your client list from Excel or your phone contacts.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Share your booking link</h3>
+            <p>Put it in your Instagram bio, Google Business profile and WhatsApp status. Clients book in about 30 seconds.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Run your day from one screen</h3>
+            <p>Bookings land in your calendar, reminders go out automatically, and you get a report every evening.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">04</span>
+          <h2>Owners who <em>stopped answering</em> the phone.</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal">
+            <blockquote>“Saturday used to be 60 calls. Now clients book on Instagram and I just check the calendar in the morning.”</blockquote>
+            <figcaption><span class="q-avatar">NK</span><div><b>Neha K.</b><small>Salon owner, Pune</small></div></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“The WhatsApp reminders alone cut our missed appointments by more than half in the first month.”</blockquote>
+            <figcaption><span class="q-avatar">DR</span><div><b>Dr. Rahul M.</b><small>Dental clinic, Navi Mumbai</small></div></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“Each of my five therapists sees their own day on their phone. No more paper register at the front desk.”</blockquote>
+            <figcaption><span class="q-avatar">SA</span><div><b>Sana A.</b><small>Spa manager, Bengaluru</small></div></figcaption>
+          </figure>
+        </div>
+        <p class="sample-note">Sample testimonials for demonstration.</p>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section class="section section-cream" id="pricing">
+      <div class="container">
+        <div class="pricing-head reveal">
+          <div>
+            <span class="section-num">05</span>
+            <h2>Simple pricing, <em>no surprises.</em></h2>
+            <p>All prices in INR. Taxes extra. Upgrade or cancel any time.</p>
+          </div>
+          <div class="billing-toggle" role="group" aria-label="Billing period">
+            <button class="toggle-btn active" data-billing="monthly" aria-pressed="true">Monthly</button>
+            <button class="toggle-btn" data-billing="yearly" aria-pressed="false">Yearly <span class="save">2 months free</span></button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <div class="price-top"><h3>Starter</h3><span class="seats">1 staff</span></div>
+            <p class="price"><span class="amount" data-monthly="0" data-yearly="0">₹0</span><span class="per">/ month</span></p>
+            <p class="price-note">Free forever</p>
+            <ul class="price-features">
+              <li>Online booking page</li>
+              <li>Up to 50 bookings / month</li>
+              <li>Email confirmations</li>
+              <li>Basic client list</li>
+            </ul>
+            <button class="btn btn-outline btn-block" data-open-modal data-plan="Starter">Start free</button>
+          </article>
+
+          <article class="price-card featured reveal">
+            <span class="badge">Most popular</span>
+            <div class="price-top"><h3>Growth</h3><span class="seats">Up to 5 staff</span></div>
+            <p class="price"><span class="amount" data-monthly="799" data-yearly="666">₹799</span><span class="per">/ month</span></p>
+            <p class="price-note yearly-note">Billed monthly</p>
+            <p class="plus-label">Everything in Starter, plus:</p>
+            <ul class="price-features">
+              <li>Unlimited bookings</li>
+              <li>WhatsApp &amp; SMS reminders</li>
+              <li>Advance UPI payments</li>
+              <li>Staff calendars &amp; leave</li>
+              <li>Daily business report</li>
+            </ul>
+            <button class="btn btn-accent btn-block" data-open-modal data-plan="Growth">Start 14-day trial</button>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="price-top"><h3>Pro</h3><span class="seats">Unlimited staff</span></div>
+            <p class="price"><span class="amount" data-monthly="1999" data-yearly="1666">₹1,999</span><span class="per">/ month</span></p>
+            <p class="price-note yearly-note">Billed monthly</p>
+            <p class="plus-label">Everything in Growth, plus:</p>
+            <ul class="price-features">
+              <li>Multiple branches</li>
+              <li>Memberships &amp; packages</li>
+              <li>Patient notes &amp; history</li>
+              <li>Priority phone support</li>
+            </ul>
+            <button class="btn btn-outline btn-block" data-open-modal data-plan="Pro">Choose Pro</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq">
+      <div class="container faq-inner">
+        <div class="section-head left reveal">
+          <span class="section-num">06</span>
+          <h2>Questions, <em>answered.</em></h2>
+          <p>Can't find what you're looking for? <a href="#contact" class="text-link">Talk to us</a>.</p>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq" open>
+            <summary>Do my clients need to download an app?</summary>
+            <p>No. Clients book from a simple web page that opens on any phone. Only you and your staff use the Slotra app.</p>
+          </details>
+          <details class="faq">
+            <summary>Can I still take walk-ins and phone bookings?</summary>
+            <p>Yes. Add walk-ins and phone bookings to the same calendar in two taps, so online and offline bookings never clash.</p>
+          </details>
+          <details class="faq">
+            <summary>How do WhatsApp reminders work?</summary>
+            <p>Slotra sends a confirmation as soon as a booking is made, then reminders 24 hours and 2 hours before. You can change the timing and the message.</p>
+          </details>
+          <details class="faq">
+            <summary>Is my clients' and patients' data safe?</summary>
+            <p>All data is encrypted and backed up daily. Only you and the staff you allow can see client records and notes.</p>
+          </details>
+          <details class="faq">
+            <summary>Can I switch plans later?</summary>
+            <p>Any time. Upgrades apply immediately, and downgrades apply from your next billing date.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT / DEMO ================= -->
+    <section class="section section-cream" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-copy reveal">
+          <span class="section-num">07</span>
+          <h2>See Slotra <em>with your own menu.</em></h2>
+          <p>Book a free 20-minute demo. We'll set up your services and staff live on the call, so you leave with a working booking page.</p>
+          <ul class="contact-details">
+            <li>
+              <span class="cd-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M22 7l-10 6L2 7"/></svg></span>
+              <div><small>Email</small>hello@slotra.example</div>
+            </li>
+            <li>
+              <span class="cd-icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+              <div><small>Call or WhatsApp</small>+91 98765 43210</div>
+            </li>
+            <li>
+              <span class="cd-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><small>Office</small>Pune, Maharashtra</div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form-card reveal" id="demo-form" novalidate>
+          <h3>Request a free demo</h3>
+          <p class="form-sub">We usually reply within 2 working hours.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="demo-name">Your name</label>
+              <input type="text" id="demo-name" name="name" placeholder="Priya Sharma" autocomplete="name" />
+              <small class="error-msg"></small>
+            </div>
+            <div class="field">
+              <label for="demo-phone">Mobile number</label>
+              <input type="tel" id="demo-phone" name="phone" placeholder="98765 43210" autocomplete="tel" inputmode="numeric" maxlength="11" />
+              <small class="error-msg"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="demo-email">Email</label>
+            <input type="email" id="demo-email" name="email" placeholder="priya@glowstudio.in" autocomplete="email" />
+            <small class="error-msg"></small>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="demo-type">Business type</label>
+              <select id="demo-type" name="type">
+                <option value="">Select…</option>
+                <option>Hair salon</option>
+                <option>Spa / wellness</option>
+                <option>Dental clinic</option>
+                <option>Skin / laser clinic</option>
+                <option>Other clinic</option>
+              </select>
+              <small class="error-msg"></small>
+            </div>
+            <div class="field">
+              <label for="demo-date">Preferred date</label>
+              <input type="date" id="demo-date" name="date" />
+              <small class="error-msg"></small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-accent btn-block btn-lg">
+            Book my demo
+            <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </button>
+          <div class="success-msg" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta">
+        <h2>Fewer calls. Fuller chairs. <em>Start today.</em></h2>
+        <button class="btn btn-accent btn-lg" data-open-modal data-plan="Free">
+          Get started free
+          <svg class="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </button>
+      </div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="23" rx="6"/><path d="M3 13h26M10 3v6M22 3v6"/><path class="tick" d="M11 21l3.5 3.5L21 18"/></svg>
+            </span>
+            <span class="logo-text">Slot<span>ra</span></span>
+          </a>
+          <p>Online appointment booking for salons, spas and clinics across India.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <a href="#contact">hello@slotra.example</a>
+          <a href="#contact">+91 98765 43210</a>
+          <a href="#home">Back to top ↑</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Slotra. A sample product built for a front-end assignment.</p>
+        <p>Made with HTML, CSS &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky demo nudge (appears after scrolling past the hero) -->
+  <div class="nudge" id="nudge" aria-hidden="true">
+    <p><b>Like what you see?</b> <span>Book a free 20-min demo.</span></p>
+    <a href="#contact" class="btn btn-accent btn-sm" tabindex="-1">Book demo</a>
+    <button class="nudge-close" id="nudge-close" aria-label="Dismiss" tabindex="-1">&times;</button>
+  </div>
+
+  <!-- ================= SIGN-UP MODAL ================= -->
+  <div class="modal-overlay" id="signup-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      <form id="signup-form" novalidate>
+        <span class="kicker small">Plan: <b id="modal-plan">Starter</b></span>
+        <h3 id="modal-title">Create your <em>Slotra</em> account</h3>
+        <p class="modal-sub">Set up your booking page in under 10 minutes. No card needed.</p>
+        <div class="field">
+          <label for="signup-business">Business name</label>
+          <input type="text" id="signup-business" name="business" placeholder="Glow Studio" />
+          <small class="error-msg"></small>
+        </div>
+        <div class="field">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" placeholder="you@business.in" autocomplete="email" />
+          <small class="error-msg"></small>
+        </div>
+        <div class="field checkbox-field">
+          <label><input type="checkbox" id="signup-terms" name="terms" /> I agree to the Terms of Service</label>
+          <small class="error-msg"></small>
+        </div>
+        <button type="submit" class="btn btn-accent btn-block btn-lg">Create account</button>
+      </form>
+      <div class="modal-success" hidden>
+        <div class="check">✓</div>
+        <h3>You're all set!</h3>
+        <p class="modal-success-text"></p>
+        <button class="btn btn-accent" data-close-modal>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
