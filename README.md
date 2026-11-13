@@ -11,20 +11,17 @@ It was built for a front-end assignment with plain **HTML, CSS and JavaScript**,
 
 **About the name:** *Bookwell* combines **book** (appointments) and **well** (wellness, beauty and health). It says what the product does and who it's for.
 
-## Live demo
-
-**Website:** <https://shravankasar37.github.io/adarshwork/>
-
 **Source code:** <https://github.com/shravankasar37/adarshwork>
-
-The site is hosted free on GitHub Pages, deployed from the `main` branch.
 
 ## Run locally
 
-No installation is needed.
+The site is not deployed online. It runs straight from the files, and no installation is needed.
 
-1. Download or clone this folder.
-2. Double-click `index.html` to open it in Chrome, Edge or Firefox.
+1. Download the ZIP, or clone the repo:
+   ```bash
+   git clone https://github.com/shravankasar37/adarshwork.git
+   ```
+2. Open the folder and double-click `index.html` to open it in Chrome, Edge or Firefox.
 
 You can also serve it with a local server:
 
