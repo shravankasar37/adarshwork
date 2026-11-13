@@ -1,5 +1,5 @@
 /* =========================================================
-   Slotra landing page — interactions
+   Bookwell landing page — interactions
    1. Mobile menu            2. Navbar state + active link
    3. Scroll reveal          4. Animated counters
    5. Business-type tabs     6. Pricing toggle
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const business = $("#signup-business").value.trim();
     const slug = business.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     $(".modal-success-text", modal).textContent =
-      `${business} is on the ${planLabel.textContent} plan. Your booking page slotra.in/${slug} is ready, and we've sent the details to ${$("#signup-email").value.trim()}.`;
+      `${business} is on the ${planLabel.textContent} plan. Your booking page bookwell.in/${slug} is ready, and we've sent the details to ${$("#signup-email").value.trim()}.`;
     signupForm.hidden = true;
     modalSuccess.hidden = false;
     $("button", modalSuccess).focus();

@@ -1,6 +1,6 @@
-# Slotra: Online Booking for Salons & Clinics
+# Bookwell: Online Booking for Salons & Clinics
 
-A premium, responsive landing page for **Slotra**, a made-up SaaS product that gives salons, spas and clinics:
+A premium, responsive landing page for **Bookwell**, a made-up SaaS product that gives salons, spas and clinics:
 
 - a 24×7 online booking page
 - WhatsApp reminders
@@ -8,6 +8,8 @@ A premium, responsive landing page for **Slotra**, a made-up SaaS product that g
 - advance payments
 
 It was built for a front-end assignment with plain **HTML, CSS and JavaScript**, with no frameworks and no build step.
+
+**About the name:** *Bookwell* combines **book** (appointments) and **well** (wellness, beauty and health). It says what the product does and who it's for.
 
 ## Live demo
 
