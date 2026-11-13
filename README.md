@@ -11,10 +11,11 @@ It was built for a front-end assignment with plain **HTML, CSS and JavaScript**,
 
 ## Live demo
 
-Not deployed yet. To deploy it free, use either option below:
+**Website:** <https://shravankasar37.github.io/adarshwork/>
 
-- **Netlify Drop:** open <https://app.netlify.com/drop> and drag this folder onto the page. You get a public link in seconds.
-- **GitHub Pages:** push this folder to a GitHub repo, then go to *Settings → Pages → Deploy from branch → main / root*.
+**Source code:** <https://github.com/shravankasar37/adarshwork>
+
+The site is hosted free on GitHub Pages, deployed from the `main` branch.
 
 ## Run locally
 
